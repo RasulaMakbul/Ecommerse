@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerse.Server", "Ecommerse\Server\Ecommerse.Server.csproj", "{BA1C4C56-59F1-4B98-B664-0EE4BF330E60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerse.Server", "Ecommerse\Server\Ecommerse.Server.csproj", "{BA1C4C56-59F1-4B98-B664-0EE4BF330E60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerse.Client", "Ecommerse\Client\Ecommerse.Client.csproj", "{362B73E3-34C7-4EC8-98A5-3DBB9D2CAE29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerse.Client", "Ecommerse\Client\Ecommerse.Client.csproj", "{362B73E3-34C7-4EC8-98A5-3DBB9D2CAE29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerse.Shared", "Ecommerse\Shared\Ecommerse.Shared.csproj", "{905D131B-D339-482C-B6E0-65381980503B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerse.Shared", "Ecommerse\Shared\Ecommerse.Shared.csproj", "{905D131B-D339-482C-B6E0-65381980503B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

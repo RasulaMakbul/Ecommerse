@@ -1,0 +1,35 @@
+﻿@page "/products/{id:int}"
+@inject IProductService ProductService
+
+@if(products == null)
+{
+    <span>Loading Product...</span>
+}
+else
+{
+    <div class="media">
+        <div class="media-img-wrapper rm-2">
+            <img class="media-img" src="@products.ImageUrl" alt="@products.title"/>
+        </div>
+        <div class="media-body">
+            <h2 class="mb-0">@products.title</h2>
+            <p>@products.description</p>
+            <h4 class="price">
+                $@products.Price
+            </h4>
+        </div>
+    </div>
+}
+
+
+@code {
+    private Products? products = null;
+
+    [Parameter]
+    public int id{ get; set; }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        products = ProductService.Products.Find(p => p.id == id);
+    }
+}

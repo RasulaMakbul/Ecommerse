@@ -3,6 +3,6 @@
     public interface IProductService
     {
         List<Products> Products { get; set; }
-        Task GetProducts();
+        Task GetProduct();
     }
 }
