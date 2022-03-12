@@ -7,19 +7,20 @@ namespace Ecommerse.Server.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly DataContext _context;
+        private readonly IProductService _productService;
 
-        public ProductsController(DataContext context)
+        public ProductsController(IProductService productService)
         {
-            _context = context;
+            
+            _productService = productService;
         }
 
 
         [HttpGet]
-        public async Task<ActionResult<List<Products>>> GetProduct()
+        public async Task<ActionResult<ServiceResponse<List<Products>>>> GetProduct()
         {
-            var products=await _context.products.ToListAsync();
-            return Ok(products);
+            var result = await _productService.GetProductsAsync();
+            return Ok(result);
         }
     }
 }

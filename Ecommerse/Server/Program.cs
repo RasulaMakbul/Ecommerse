@@ -1,7 +1,9 @@
 global using Ecommerse.Shared;
 global using Microsoft.EntityFrameworkCore;
 global using Ecommerse.Server.Data;
+global using Ecommerse.Server.Services.ProductService;
 using Microsoft.AspNetCore.ResponseCompression;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +18,8 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<IProductService, ProductService>();
 
 var app = builder.Build();
 
